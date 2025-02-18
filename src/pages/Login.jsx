@@ -18,7 +18,13 @@ const Login = () => {
       const response = await LoginService.login(username, password, role);
       if (response) {
         // Redirecionamento baseado no papel do usuário
-        navigate(role === 'student' ? '/student-home' : '/teacher-dashboard');
+        if (role === 'student') {
+          navigate('/student-home');
+        } else if (role === 'teacher') {
+          navigate('/teacher-dashboard');
+        } else if (role === 'secretary') {
+          navigate('/secretary-home');
+        }
       }
     } catch (error) {
       if (error.message === 'Network Error') {
@@ -79,6 +85,15 @@ const Login = () => {
                 onChange={() => setRole('teacher')}
               />{' '}
               Teacher
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="secretary"
+                checked={role === 'secretary'}
+                onChange={() => setRole('secretary')}
+              />{' '}
+              Secretary
             </label>
           </div>
 

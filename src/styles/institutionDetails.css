@@ -1,0 +1,41 @@
+.institution-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: -590px; /* Ajuste a margem superior para reposicionar o painel mais acima */
+    width: 100%; /* Certifique-se de que o quadro de avisos ocupe toda a largura disponível */
+    max-width: 800px; /* Defina uma largura máxima para manter o quadro de avisos centralizado */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.institution-details h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.institution-details p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.institution-details .aviso {
+    font-size: 1.1rem;
+    color: #d9534f; /* Cor vermelha para destacar o aviso */
+    margin-bottom: 15px;
+}
+
+.slick-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slick-dots li button:before {
+    color: #2e7d32; /* Cor dos pontos de navegação */
+}

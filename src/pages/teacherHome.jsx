@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import studentService from '../services/StudentService';
+import studentService from '../services/teacherService';
 import InstitutionDetails from '../components/InstitutionDetails';
-import '../styles/studentHome.css'; // Importação do CSS
+import '../styles/teacherHome.css'; // Importação do CSS
 
-const StudentHome = () => {
+const TeachertHome = () => {
     const [institutions, setInstitutions] = useState([]);
     const [selectedInstitution, setSelectedInstitution] = useState(null); // Estado para a instituição selecionada
     const cpf = '51033108804'; // Substituir pelo CPF real do estudante logado
@@ -59,10 +59,10 @@ const StudentHome = () => {
                             <div className="institution-menu">
                                 <h3>{selectedInstitution.nameInstitution}</h3>
                                 <ul>
-                                    <li><a href="/notas">Notas</a></li>
+                                    <li><a href="/notas">Lançar Notas</a></li>
                                     <li><a href="/grades">Grade de Aulas</a></li>
                                     <li><a href="/attendance">Alterar Dados</a></li>
-                                    <li><a href="/attendance">Histórico de Faltas</a></li>
+                                    <li><a href="/attendance">Lançar Faltas</a></li>
                                     <li><a href="/attendance">Abertura de Chamado</a></li>
                                 </ul>
                             </div>
@@ -75,4 +75,4 @@ const StudentHome = () => {
     );
 };
 
-export default StudentHome;
+export default TeachertHome;
